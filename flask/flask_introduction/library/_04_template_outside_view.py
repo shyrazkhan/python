@@ -14,5 +14,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    library_name = "Poe"
-    return render_template('index.html', library_name=library_name)
+    library_name = "Python DApp!"
+    name = "Shiraz Khan"
+    return render_template('index.html', library_name=library_name, created_by=name)

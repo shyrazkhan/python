@@ -17,9 +17,21 @@ app = Flask(__name__)
 def hello_world():
     html = """
         <html>
-            <h1>Welcome to our Library!</h1>
+            <h1>Welcome to python inside view!</h1>
         </html>
     """
     authors = ["Alan Poe", "Jorge L. Borges", "Mark Twain"]
+    # build an <ul> with authors
+    return html
+
+
+@app.route('/view')
+def hello_view():
+    html = """
+        <html>
+            <h1>Welcome to python inside view!</h1>
+            <ul>1</ul>
+        </html>
+    """    
     # build an <ul> with authors
     return html

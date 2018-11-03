@@ -1,13 +1,61 @@
-<html>
-    <head>
-        <title>{{library_name}} library</title>
-        <style type="text/css">
-            h1 {
-                color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Welcome to {{library_name}} library!</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Python DApp</title>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/bootstrap.min.js"></script>  
+  <script src="../js/app.js"></script>
+  <!-- Bootstrap -->
+  <link href="../static/bootstrap.css" rel="stylesheet">  
+</head>
+
+<body>
+  <div id="main-content"  class="container">
+    <!-- <article>
+      <header>
+        <p style="text-align-last: right; margin-top: 5px">
+          <a href="index.html">Sign-in</a>
+          <span style="margin-left: 15px">
+            <a href="registerandenroll.html">Register and Enroll</a>
+          </span>
+        </p>
+      </header>
+    </article> -->
+    <div class="row" style="margin-top: 100px">
+      <div class="col-xs-12 col-sm-8 col-sm-push-2">
+        <h1 class="text-center">Python-Blockchain Application</h1>
+        <hr/>
+        <form onSubmit="App.userValidation(); return false;" role="form">
+          <div class="form-group">
+            <input id="txt-username" placeholder="User name" class="form-control input-lg" type="text" required>
+            </input>
+            <br />
+            <input id="txt-password" class="form-control input-lg" placeholder="Password" type="password" required>
+            </input>
+            <br/>
+            <span style="text-align: -moz-center" class="input-group-btn">
+              <button type="submit" class="btn-primary btn-lg">Sign In</button>
+              <button onclick="App.registerEnrollPage()" style="margin-left: 15px" class="btn-primary btn-lg">Register</button>
+            </span>
+          </div>
+        </form>
+        <hr/>
+        <p class="message-text-center" style="text-align: center"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div id="progress-bar" class="progress" style="width: 50%; margin-left: 25%; display: none" >
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width:100%">
+      Processing....
+    </div>
+  </div>   -->
+</body>
 </html>
