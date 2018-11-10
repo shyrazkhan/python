@@ -48,6 +48,17 @@ contract Authenticate {
             return abiUser;
     }
     
+    function login(string username, string password) public view returns(bool success) {
+        bool exists = checkUserExists();
+        if(exists) {
+            
+            if(keccak256(Users[msg.sender].username) == keccak256(username)  && keccak256(Users[msg.sender].password)  == keccak256(password)) {
+            Users[msg.sender].islogin = true;
+            return true;
+            }
+        }
+        return false;
+    }
     
     
     
